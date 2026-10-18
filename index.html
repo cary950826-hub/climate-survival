@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>氣候變遷生存模擬器</title>
+    <!-- 引入外部 CSS 檔案 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-container">
+    <h1>🌍 氣候變遷生存模擬器</h1>
+    <div class="year-display" id="year-display">第 1 年 / 目標 10 年</div>
+
+    <div class="stats-container">
+        <div class="stat-row">
+            <div class="stat-label">💰 資金</div>
+            <div class="progress-bar"><div class="progress-fill" id="bar-money" style="background-color: var(--money-color);"></div></div>
+            <div class="stat-value" id="val-money">100</div>
+        </div>
+        <div class="stat-row">
+            <div class="stat-label">😊 民心</div>
+            <div class="progress-bar"><div class="progress-fill" id="bar-approval" style="background-color: var(--approval-color);"></div></div>
+            <div class="stat-value" id="val-approval">100</div>
+        </div>
+        <div class="stat-row">
+            <div class="stat-label">🌍 生態</div>
+            <div class="progress-bar"><div class="progress-fill" id="bar-env" style="background-color: var(--env-color);"></div></div>
+            <div class="stat-value" id="val-env">100</div>
+        </div>
+    </div>
+
+    <div class="event-card">
+        <div class="event-title" id="event-title">事件標題</div>
+        <div class="event-desc" id="event-desc">事件描述載入中...</div>
+    </div>
+
+    <div class="actions">
+        <button id="btn-a" onclick="makeChoice(0)">選項 A</button>
+        <button id="btn-b" onclick="makeChoice(1)">選項 B</button>
+    </div>
+
+    <!-- 結算畫面 -->
+    <div class="overlay" id="end-screen">
+        <h2 id="end-title">遊戲結束</h2>
+        <p id="end-msg">訊息</p>
+        <button class="restart-btn" onclick="initGame()">再試一次</button>
+    </div>
+</div>
+
+<!-- 引入外部 JavaScript 檔案 -->
+<script src="script.js"></script>
+</body>
+</html>
