@@ -1,0 +1,163 @@
+:root {
+    --bg-color: #1a1a2e;
+    --text-color: #e2e2e2;
+    --panel-bg: #16213e;
+    --btn-bg: #0f3460;
+    --btn-hover: #e94560;
+    --money-color: #ffd700;
+    --approval-color: #ff6b6b;
+    --env-color: #4cd137;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background-color: var(--panel-bg);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: #fff;
+}
+
+.year-display {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--btn-hover);
+}
+
+/* 狀態條設計 */
+.stats-container {
+    margin-bottom: 30px;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.stat-label {
+    width: 60px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    background-color: #333;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 15px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 100%;
+    transition: width 0.4s ease-in-out, background-color 0.3s;
+}
+
+.stat-value {
+    width: 35px;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* 事件區塊 */
+.event-card {
+    background-color: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    min-height: 120px;
+}
+
+.event-title {
+    font-size: 1.3rem;
+    color: var(--btn-hover);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.event-desc {
+    line-height: 1.5;
+}
+
+/* 按鈕設計 */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    background-color: var(--btn-bg);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    text-align: left;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* 結算畫面 */
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.overlay p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.restart-btn {
+    background-color: var(--env-color);
+    text-align: center;
+}
